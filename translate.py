@@ -68,7 +68,9 @@ def cmd():
     print(cmd_guide)
     while 1:
         inp = input(">")
-        if "@from" == inp.split(" ")[0]:
+        if len(inp.replace(" ","")) == 0:
+            #no input, do nothing
+        elif "@from" == inp.split(" ")[0]:
             f = inp.split(" ")[1]
             print("原文语言已变更为:"+json.loads(language_list)[f])
         elif "@to" == inp.split(" ")[0]:

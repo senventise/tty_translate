@@ -69,6 +69,7 @@ def cmd():
     while 1:
         inp = input(">")
         if len(inp.replace(" ","")) == 0:
+            print("(^_^.)")
             #no input, do nothing
         elif "@from" == inp.split(" ")[0]:
             f = inp.split(" ")[1]
